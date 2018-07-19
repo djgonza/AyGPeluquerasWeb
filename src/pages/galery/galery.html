@@ -1,0 +1,12 @@
+<div>
+	<div *ngIf="images.length == 0">No hay imagenes</div>
+	<ion-fab right bottom>
+		<button ion-fab (click)="selectFiles()">
+			<label for="files">
+				<ion-icon name="add"></ion-icon>
+			</label>
+		</button>
+	</ion-fab>
+</div>
+
+<input (change)="uploadFiles($event)" type="file" #fileInput multiple style="display:none;"/>
